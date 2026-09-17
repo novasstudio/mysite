@@ -6,15 +6,21 @@ This project is a 100% static Next.js export. It does not require a Node.js serv
 
 | Setting | Value |
 | --- | --- |
-| Framework preset | Next.js (Static HTML Export) |
+| Framework preset | None, or Next.js (Static HTML Export) if available |
 | Production branch | `main` |
 | Build command | `npm run build` |
 | Build output directory | `out` |
+| Deploy command | Leave empty |
 | Root directory | `/` |
 | Node.js version | `20` |
 
 If the Cloudflare dashboard does not pick up `.nvmrc`, add the build environment variable `NODE_VERSION` with the value `20`.
 
+## Important: do not use the Workers deploy command
+
+This repository already exports a complete static site to `out/`. Do not configure `npx wrangler deploy`, `opennextjs-cloudflare`, or `.next` as the output directory. Those settings invoke the Workers/OpenNext adapter and are incompatible with this static-export configuration.
+
+If the dashboard requires a deploy command or shows `.next` as the output directory, the project was created as a Workers application. Create a **Pages** application instead, connect the same GitHub repository, select the static settings above, and leave the deploy command empty.
 ## Connect GitHub
 
 1. Push the project to GitHub.

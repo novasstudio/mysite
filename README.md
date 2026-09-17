@@ -33,14 +33,15 @@ Use these values when connecting the GitHub repository in **Cloudflare Dashboard
 | Setting | Value |
 | --- | --- |
 | Repository | `novasstudio/mysite` |
-| Framework preset | Next.js (Static HTML Export) |
+| Framework preset | None, or Next.js (Static HTML Export) if available |
 | Production branch | `main` |
 | Build command | `npm run build` |
 | Build output directory | `out` |
+| Deploy command | Leave empty |
 | Root directory | `/` |
 | Node.js version | `20` |
 
-No runtime environment variables, database, server, or API are required. If Cloudflare does not detect `.nvmrc`, set the build variable `NODE_VERSION=20`.
+No runtime environment variables, database, server, or API are required. Do not use `npx wrangler deploy`, OpenNext, or `.next`; those are Workers/server deployment settings and are not used by this static Pages project. If Cloudflare does not detect `.nvmrc`, set the build variable `NODE_VERSION=20`.
 
 ## Custom domain
 
