@@ -29,7 +29,7 @@ export const games: Game[] = [
     theme: "sand",
     appStoreUrl: "#coming-soon",
     googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.games",
+    supportEmail: "support@launchplay.ai",
     features: [
       { title: "Easy to Play", description: "Pick a color, pour the sand, and watch the picture appear.", icon: "tap" },
       { title: "Relaxing Gameplay", description: "Unhurried levels made for a peaceful little break.", icon: "calm" },
@@ -48,7 +48,7 @@ export const games: Game[] = [
     theme: "purr",
     appStoreUrl: "#coming-soon",
     googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.games",
+    supportEmail: "support@launchplay.ai",
     features: [
       { title: "Easy to Learn", description: "Familiar logic with clear, friendly guidance.", icon: "tap" },
       { title: "Cozy Mood", description: "Soft colors and charming cats keep every session calm.", icon: "calm" },
@@ -67,7 +67,7 @@ export const games: Game[] = [
     theme: "traffic",
     appStoreUrl: "#coming-soon",
     googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.games",
+    supportEmail: "support@launchplay.ai",
     features: [
       { title: "One-Tap Controls", description: "Simple interactions put the whole puzzle at your fingertips.", icon: "tap" },
       { title: "Satisfying Flow", description: "Every solved jam ends in a colorful little celebration.", icon: "calm" },

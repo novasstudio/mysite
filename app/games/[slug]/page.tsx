@@ -6,7 +6,7 @@ import { GameArtwork } from "@/components/GameArtwork";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return games.map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return game ? { title: game.name, description: game.shortDescription, openGraph: { title: `${game.name} | LaunchPlay`, description: game.shortDescription } } : {}; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return game ? { title: game.name, description: game.shortDescription, alternates: { canonical: `/games/${game.slug}/` }, openGraph: { title: `${game.name} | LaunchPlay`, description: game.shortDescription, url: `/games/${game.slug}/` } } : {}; }
 
 export default async function GamePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const game = getGame(slug); if (!game) notFound();

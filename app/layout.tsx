@@ -8,10 +8,11 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-display" });
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://launchplay.games"),
+  metadataBase: new URL("https://launchplay.ai"),
   title: { default: "LaunchPlay | Casual Mobile Games", template: "%s | LaunchPlay" },
-  description: "LaunchPlay creates simple, colorful and relaxing mobile games, including casual and puzzle games for players around the world.",
-  openGraph: { title: "LaunchPlay", description: "Small games. Big joy.", url: "https://launchplay.games", siteName: "LaunchPlay", type: "website" },
+  description: "LaunchPlay creates simple, colorful and relaxing mobile games for players around the world.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "LaunchPlay", description: "LaunchPlay creates simple, colorful and relaxing mobile games for players around the world.", url: "https://launchplay.ai", siteName: "LaunchPlay", type: "website" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -4,7 +4,7 @@ import { games, getGame } from "@/data/games";
 import { LegalLayout } from "@/components/LegalLayout";
 export const dynamicParams = false;
 export function generateStaticParams() { return games.map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return { title: game ? `${game.name} Privacy Policy` : "Game Privacy Policy" }; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return game ? { title: `${game.name} Privacy Policy`, description: `Privacy policy for ${game.name} by LaunchPlay.`, alternates: { canonical: `/games/${game.slug}/privacy/` }, openGraph: { title: `${game.name} Privacy Policy | LaunchPlay`, description: `Privacy policy for ${game.name} by LaunchPlay.`, url: `/games/${game.slug}/privacy/` } } : {}; }
 export default async function GamePrivacy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const game = getGame(slug); if (!game) notFound();
   return <LegalLayout label="GAME PRIVACY" title={`Privacy Policy for ${game.name}`} updated="September 17, 2026">

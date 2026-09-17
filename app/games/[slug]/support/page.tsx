@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { games, getGame } from "@/data/games";
 export const dynamicParams = false;
 export function generateStaticParams() { return games.map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return { title: game ? `${game.name} Support` : "Game Support" }; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return game ? { title: `${game.name} Support`, description: `Get help and support for ${game.name}.`, alternates: { canonical: `/games/${game.slug}/support/` }, openGraph: { title: `${game.name} Support | LaunchPlay`, description: `Get help and support for ${game.name}.`, url: `/games/${game.slug}/support/` } } : {}; }
 export default async function GameSupport({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const game = getGame(slug); if (!game) notFound();
   const faqs = [{q:"The game won't start",a:"Restart your device, make sure the game is updated, and check that enough storage space is available."},{q:"I lost my game progress",a:"Please contact us with your device details and any information about when the progress was lost."},{q:"I have an advertising issue",a:"Tell us what happened and, if possible, include a screenshot of the ad so we can investigate."},{q:"The game is running slowly",a:"Close other apps, restart your device, and install the latest game and operating system updates."},{q:"I have another issue",a:"We're happy to help. Email our support team with the details listed below."}];
