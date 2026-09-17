@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { games, getGame } from "@/data/games";
+export const dynamicParams = false;
+export function generateStaticParams() { return games.map(({ slug }) => ({ slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const game = getGame(slug); return { title: game ? `${game.name} Support` : "Game Support" }; }
+export default async function GameSupport({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params; const game = getGame(slug); if (!game) notFound();
+  const faqs = [{q:"The game won't start",a:"Restart your device, make sure the game is updated, and check that enough storage space is available."},{q:"I lost my game progress",a:"Please contact us with your device details and any information about when the progress was lost."},{q:"I have an advertising issue",a:"Tell us what happened and, if possible, include a screenshot of the ad so we can investigate."},{q:"The game is running slowly",a:"Close other apps, restart your device, and install the latest game and operating system updates."},{q:"I have another issue",a:"We're happy to help. Email our support team with the details listed below."}];
+  return <main className="support-detail inner-page"><section className="page-hero"><div className="container narrow"><span className="eyebrow">PLAYER SUPPORT</span><h1>{game.name} Support</h1><p>Need help? We&apos;re here for you.</p></div></section><section className="section"><div className="container narrow"><h2 className="content-heading">Frequently asked questions</h2><div className="faq-list">{faqs.map((x,i)=><details key={x.q} open={i===0}><summary>{x.q}<span>+</span></summary><p>{x.a}</p></details>)}</div><div className="contact-panel"><span className="feature-icon">✉</span><div><h2>Still need help?</h2><p>Email us at <a href={`mailto:${game.supportEmail}`}>{game.supportEmail}</a>. When contacting us, please include:</p><ul><li>Game name and version</li><li>Device model</li><li>Operating system version</li><li>A description of the issue</li><li>A screenshot, if available</li></ul></div></div></div></section></main>;
+}
