@@ -28,9 +28,9 @@ const sections = [
 
 export default function Privacy() {
   return (
-    <LegalLayout label="LEGAL" title="Privacy Policy" updated="September 19, 2026">
+    <LegalLayout label="LEGAL" title="Privacy Policy" updated="October 13, 2026">
       <p>
-        This Privacy Policy explains how LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) handles personal information when you visit launchplay.ai, play our mobile games, contact us, or use another service that links to this policy (together, the &quot;Services&quot;). It also explains the choices and rights that may be available to you.
+        This Privacy Policy explains how Crispy Cravings LLC, operating as LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), handles personal information when you visit launchplay.ai, play our mobile games, contact us, or use another service that links to this policy (together, the &quot;Services&quot;). It also explains the choices and rights that may be available to you.
       </p>
       <nav className="legal-toc" aria-label="Privacy policy contents">
         <strong>Contents</strong>
@@ -38,7 +38,7 @@ export default function Privacy() {
       </nav>
       <h2 id="scope">1. Scope</h2>
       <p>
-        This policy applies to the LaunchPlay website and to LaunchPlay games that link to it, including Sand Art Puzzle, Purrdoku, and Color Traffic Jam. A game-specific notice may provide additional details and will control if it conflicts with this general policy. This policy does not cover third-party services that we do not control, such as app stores, advertising networks, or websites reached through external links.
+        This policy applies to the LaunchPlay website and to LaunchPlay games that link to it, including Purrdoku and BBQ Rush. A game-specific notice may provide additional details and will control if it conflicts with this general policy. This policy does not cover third-party services that we do not control, such as app stores, advertising networks, or websites reached through external links.
       </p>
       <h2 id="collection">2. Information we collect</h2>
       <p>What we collect depends on the Service and the features you use. A category listed below may not apply to every game.</p>
@@ -94,7 +94,7 @@ export default function Privacy() {
         <li>Use your device settings to reset or limit advertising identifiers and app permissions.</li>
         <li>Use any consent or privacy controls made available in the relevant game or platform.</li>
         <li>Uninstalling a game removes data stored only on that device, but does not necessarily delete information already held by a service provider.</li>
-        <li>Email <a href="mailto:hello@launchplay.ai?subject=Privacy%20Rights%20Request">hello@launchplay.ai</a> with the subject &quot;Privacy Rights Request&quot; to submit a request. Include the game name, player or installation ID if available, your country or state, and the right you wish to exercise. Do not send a password or full payment-card number.</li>
+        <li>Email <a href="mailto:crispy@launchplay.ai?subject=Privacy%20Rights%20Request">crispy@launchplay.ai</a> with the subject &quot;Privacy Rights Request&quot; to submit a request. Include the game name, player or installation ID if available, your country or state, and the right you wish to exercise. Do not send a password or full payment-card number.</li>
       </ul>
       <p>
         We may ask for information reasonably necessary to verify your identity or authority. An authorized agent may submit a request where permitted by law, but we may require proof of authorization. Legal exceptions may allow or require us to retain certain information. Residents of the EEA, United Kingdom, or Switzerland may also complain to their local data protection authority.
@@ -109,7 +109,7 @@ export default function Privacy() {
       </p>
       <h2 id="children">8. Children&apos;s privacy</h2>
       <p>
-        The Services are intended for a general audience and are not directed to children under 13, or the higher minimum age required in their location. We do not knowingly collect personal information from a child without any consent required by law. A parent or guardian who believes a child provided personal information should email <a href="mailto:hello@launchplay.ai?subject=Child%20Data%20Request">hello@launchplay.ai</a> with the subject &quot;Child Data Request&quot; and include the game name and any available player or installation ID. We may take reasonable steps to verify the requester&apos;s identity and relationship to the child before acting.
+        The Services are intended for a general audience and are not directed to children under 13, or the higher minimum age required in their location. We do not knowingly collect personal information from a child without any consent required by law. A parent or guardian who believes a child provided personal information should email <a href="mailto:crispy@launchplay.ai?subject=Child%20Data%20Request">crispy@launchplay.ai</a> with the subject &quot;Child Data Request&quot; and include the game name and any available player or installation ID. We may take reasonable steps to verify the requester&apos;s identity and relationship to the child before acting.
       </p>
       <h2 id="updates">9. Changes to this policy</h2>
       <p>
@@ -117,7 +117,7 @@ export default function Privacy() {
       </p>
       <h2 id="contact">10. Contact us</h2>
       <p>
-        For privacy questions or requests, email <a href="mailto:hello@launchplay.ai">hello@launchplay.ai</a>. For help with a specific title, visit <Link href="/support">Game Support</Link> or email <a href="mailto:support@launchplay.ai">support@launchplay.ai</a>. Please identify the relevant game in your message.
+        Contact Crispy Cravings LLC at <a href="mailto:crispy@launchplay.ai">crispy@launchplay.ai</a> or 318 Cambridge Ave, Palo Alto, CA 94306, United States. For help with a specific title, visit <Link href="/support">Game Support</Link> and identify the relevant game in your message.
       </p>
     </LegalLayout>
   );

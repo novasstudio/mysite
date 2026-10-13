@@ -5,74 +5,60 @@ export type Game = {
   description: string;
   shortDescription: string;
   genres: string[];
-  features: { title: string; description: string; icon: string }[];
-  appStoreUrl: string;
-  googlePlayUrl: string;
+  features: { title: string; description: string }[];
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
   supportEmail: string;
-  theme: "sand" | "purr" | "traffic";
-  privacy: {
-    usesAds: boolean;
-    usesAnalytics: boolean;
-    usesCrashReporting: boolean;
-    customSections?: { title: string; body: string }[];
-  };
+  theme: "purr" | "bbq";
+  artwork: { icon: string; hero: string; screenshots: string[] };
+  privacy: { usesAds: boolean; usesAnalytics: boolean; usesCrashReporting: boolean };
 };
 
 export const games: Game[] = [
   {
-    slug: "sand-art-puzzle",
-    name: "Sand Art Puzzle",
-    tagline: "Pour color. Find your calm.",
-    shortDescription: "Relax, fill, and bring colorful pictures to life.",
-    description: "A soothing color puzzle where every pour reveals a tiny work of art. Take your time, find the right shades, and enjoy the satisfying finish.",
-    genres: ["Puzzle", "Relaxing"],
-    theme: "sand",
-    appStoreUrl: "#coming-soon",
-    googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.ai",
-    features: [
-      { title: "Easy to Play", description: "Pick a color, pour the sand, and watch the picture appear.", icon: "tap" },
-      { title: "Relaxing Gameplay", description: "Unhurried levels made for a peaceful little break.", icon: "calm" },
-      { title: "Colorful Levels", description: "Bright, tactile artwork with a satisfying reveal.", icon: "color" },
-      { title: "Fun Challenges", description: "Fresh pictures and clever color choices to explore.", icon: "star" },
-    ],
-    privacy: { usesAds: true, usesAnalytics: true, usesCrashReporting: true },
-  },
-  {
     slug: "purrdoku",
     name: "Purrdoku",
-    tagline: "A cozy puzzle with catitude.",
-    shortDescription: "A cozy cat-themed logic puzzle experience.",
-    description: "Curl up with a warm, playful take on logic puzzles. Friendly felines, thoughtful challenges, and calm moments make every grid feel like home.",
-    genres: ["Puzzle", "Logic"],
+    tagline: "Every cat has a perfect place.",
+    shortDescription: "A cozy logic puzzle filled with colorful grids and magical cats.",
+    description: "Study the grid, follow three simple rules, and find the perfect square for every magical cat. Purrdoku turns thoughtful logic into a bright, satisfying little ritual.",
+    genres: ["Logic", "Puzzle"],
     theme: "purr",
-    appStoreUrl: "#coming-soon",
-    googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.ai",
+    appStoreUrl: "https://apps.apple.com/app/id6813807358",
+    googlePlayUrl: "https://play.google.com/store/apps/details?id=com.cps.game.purrdoku",
+    supportEmail: "crispy@launchplay.ai",
+    artwork: {
+      icon: "/games/purrdoku/icon.webp",
+      hero: "/games/purrdoku/hero.webp",
+      screenshots: [1, 2, 3, 4, 5].map((n) => `/games/purrdoku/shot-${n}.webp`),
+    },
     features: [
-      { title: "Easy to Learn", description: "Familiar logic with clear, friendly guidance.", icon: "tap" },
-      { title: "Cozy Mood", description: "Soft colors and charming cats keep every session calm.", icon: "calm" },
-      { title: "Daily Puzzles", description: "A fresh reason to stretch your brain each day.", icon: "color" },
-      { title: "Smart Challenges", description: "A gentle difficulty curve with rewarding solutions.", icon: "star" },
+      { title: "Simple rules", description: "One cat per color, row, and column—with no cats side by side." },
+      { title: "Clever grids", description: "Fresh layouts reward calm observation and thoughtful moves." },
+      { title: "Magical charm", description: "A vibrant world of wizard cats, soft color, and playful detail." },
+      { title: "Helpful hints", description: "A gentle nudge is always nearby when a puzzle gets tricky." },
     ],
     privacy: { usesAds: true, usesAnalytics: true, usesCrashReporting: false },
   },
   {
-    slug: "color-traffic-jam",
-    name: "Color Traffic Jam",
-    tagline: "Sort the cars. Clear the way.",
-    shortDescription: "Sort, solve, and clear the traffic.",
-    description: "Turn a busy parking lot into a satisfying flow of color. Match riders, move the right cars, and untangle each playful traffic puzzle.",
-    genres: ["Puzzle", "Casual"],
-    theme: "traffic",
-    appStoreUrl: "#coming-soon",
-    googlePlayUrl: "#coming-soon",
-    supportEmail: "support@launchplay.ai",
+    slug: "bbq-rush",
+    name: "BBQ Rush",
+    tagline: "Grill. Serve. Grow.",
+    shortDescription: "Build a tiny BBQ shop into a sizzling restaurant empire.",
+    description: "Fire up the grill, serve hungry guests, hire a brilliant team, and grow a humble BBQ shop into the busiest restaurant in town.",
+    genres: ["Simulation", "Casual"],
+    theme: "bbq",
+    googlePlayUrl: "https://play.google.com/store/apps/details?id=cps.game.bbq",
+    supportEmail: "crispy@launchplay.ai",
+    artwork: {
+      icon: "/games/bbq-rush/icon.webp",
+      hero: "/games/bbq-rush/hero.webp",
+      screenshots: [1, 2, 3, 4, 5].map((n) => `/games/bbq-rush/shot-${n}.webp`),
+    },
     features: [
-      { title: "One-Tap Controls", description: "Simple interactions put the whole puzzle at your fingertips.", icon: "tap" },
-      { title: "Satisfying Flow", description: "Every solved jam ends in a colorful little celebration.", icon: "calm" },
-      { title: "Playful Worlds", description: "Cheerful streets and bright characters in every level.", icon: "color" },
-      { title: "Clever Puzzles", description: "Plan ahead as each new traffic jam adds a twist.", icon: "star" },
+      { title: "Run the grill", description: "Cook sizzling plates and keep every hungry customer smiling." },
+      { title: "Build your team", description: "Hire and upgrade staff to make the restaurant hum." },
+      { title: "Deliver more", description: "Take on delivery orders and unlock new ways to grow." },
+      { title: "Become a tycoon", description: "Upgrade equipment, expand the floor, and build your BBQ empire." },
     ],
     privacy: { usesAds: true, usesAnalytics: true, usesCrashReporting: true },
   },

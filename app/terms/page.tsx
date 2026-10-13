@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <LegalLayout label="LEGAL" title="Terms of Service" updated="September 19, 2026">
+    <LegalLayout label="LEGAL" title="Terms of Service" updated="October 13, 2026">
       <p>
-        These Terms of Service (&quot;Terms&quot;) are an agreement between you and LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). They govern your use of launchplay.ai, our mobile games&mdash;including Sand Art Puzzle, Purrdoku, and Color Traffic Jam&mdash;and any related service that links to these Terms (together, the &quot;Services&quot;). By using a Service, you agree to these Terms. If you do not agree, do not use the Service.
+        These Terms of Service (&quot;Terms&quot;) are an agreement between you and Crispy Cravings LLC, operating as LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). They govern your use of launchplay.ai, our mobile games&mdash;including Purrdoku and BBQ Rush&mdash;and any related service that links to these Terms (together, the &quot;Services&quot;). By using a Service, you agree to these Terms. If you do not agree, do not use the Service.
       </p>
       <h2>1. Eligibility</h2>
       <p>
@@ -74,7 +74,7 @@ export default function Terms() {
       </p>
       <h2>12. Governing law and disputes</h2>
       <p>
-        Before filing a formal claim, you and LaunchPlay agree to try in good faith to resolve the dispute informally for 30 days. Send a notice describing the issue and requested resolution to <a href="mailto:hello@launchplay.ai?subject=Legal%20Notice">hello@launchplay.ai</a>. The governing law and courts will be those applicable to LaunchPlay&apos;s registered business location, without overriding mandatory rights or courts available to consumers under local law. These Terms do not currently require individual arbitration or waive participation in a class action.
+        Before filing a formal claim, you and LaunchPlay agree to try in good faith to resolve the dispute informally for 30 days. Send a notice describing the issue and requested resolution to <a href="mailto:crispy@launchplay.ai?subject=Legal%20Notice">crispy@launchplay.ai</a>. The governing law and courts will be those applicable to LaunchPlay&apos;s registered business location, without overriding mandatory rights or courts available to consumers under local law. These Terms do not currently require individual arbitration or waive participation in a class action.
       </p>
       <h2>13. Changes to these Terms</h2>
       <p>
@@ -86,7 +86,7 @@ export default function Terms() {
       </p>
       <h2>15. Contact</h2>
       <p>
-        For questions about these Terms, email <a href="mailto:hello@launchplay.ai">hello@launchplay.ai</a>. For help with a game, visit <Link href="/support">Game Support</Link> or email <a href="mailto:support@launchplay.ai">support@launchplay.ai</a> and include the game name.
+        For questions about these Terms, email <a href="mailto:crispy@launchplay.ai">crispy@launchplay.ai</a>. For help with a game, visit <Link href="/support">Game Support</Link> and include the game name in your message.
       </p>
     </LegalLayout>
   );
