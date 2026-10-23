@@ -62,6 +62,23 @@ export const games: Game[] = [
     ],
     privacy: { usesAds: true, usesAnalytics: true, usesCrashReporting: true },
   },
+  {
+    slug: "fluffy-forest",
+    name: "Fluffy:Forest",
+    tagline: "A cozy forest adventure awaits.",
+    shortDescription: "Step into the gentle, fluffy world of Fluffy:Forest.",
+    description: "Discover Fluffy:Forest, a cozy new game from LaunchPlay.",
+    genres: ["Casual", "Adventure"],
+    theme: "purr",
+    supportEmail: "crispy@launchplay.ai",
+    artwork: {
+      icon: "/games/fluffy-forest/icon.webp",
+      hero: "/games/fluffy-forest/hero.webp",
+      screenshots: [1, 2, 3, 4, 5].map((n) => `/games/fluffy-forest/shot-${n}.webp`),
+    },
+    features: [],
+    privacy: { usesAds: false, usesAnalytics: false, usesCrashReporting: false },
+  },
 ];
 
 export function getGame(slug: string) {

@@ -17,7 +17,7 @@ export default function Terms() {
   return (
     <LegalLayout label="LEGAL" title="Terms of Service" updated="October 13, 2026">
       <p>
-        These Terms of Service (&quot;Terms&quot;) are an agreement between you and Crispy Cravings LLC, operating as LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). They govern your use of launchplay.ai, our mobile games&mdash;including Purrdoku and BBQ Rush&mdash;and any related service that links to these Terms (together, the &quot;Services&quot;). By using a Service, you agree to these Terms. If you do not agree, do not use the Service.
+        These Terms of Service (&quot;Terms&quot;) are an agreement between you and Crispy Cravings LLC, operating as LaunchPlay (&quot;LaunchPlay,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). They govern your use of launchplay.ai, our mobile games&mdash;including Purrdoku, BBQ Rush, and Fluffy:Forest&mdash;and any related service that links to these Terms (together, the &quot;Services&quot;). By using a Service, you agree to these Terms. If you do not agree, do not use the Service.
       </p>
       <h2>1. Eligibility</h2>
       <p>
